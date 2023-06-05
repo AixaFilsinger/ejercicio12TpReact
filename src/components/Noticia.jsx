@@ -1,18 +1,17 @@
 import { Col, Card, Button } from "react-bootstrap";
 
-const Noticia = () => {
+const Noticia = ({noticia}) => {
   return (
     <>
     <Col md={4} className="mb-3">
       <Card>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={noticia.image_url} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>{noticia.title}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {noticia.description}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Ver</Button>
         </Card.Body>
       </Card>
     </Col>
